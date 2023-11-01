@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block titulo%} Agregar nuevo Articulo {% endblock %} {% block content%}
+<hr />
+<div class="contenedor">
+  <div class="card">
+    <div class="card-header">Crear un articulo</div>
+    <div class="card-body">
+      <h4 class="card-title">Datos del articulo</h4>
+      {% include 'articulo/form.html' %}
+    </div>
+    <div class="card-footer text-muted"></div>
+  </div>
+</div>
+{% endblock %}

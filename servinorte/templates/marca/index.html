@@ -1,0 +1,67 @@
+{% extends 'base.html' %}{% block content %}
+
+<hr />
+<div class="contenedor">
+  <div class="card">
+    <div class="card-header">
+      <a
+        name=""
+        id=""
+        class="btn btn-success text-white"
+        style="font-size: medium; font-weight: bold"
+        href="{% url 'crear_marca' %}"
+        role="button"
+      >
+        Agregar nueva marca
+      </a>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">Marcas</h4>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for marca in marcas %}
+          <tr>
+            <td>{{ marca.id }}</td>
+            <td>{{ marca.codigo_marca }}</td>
+            <td>{{ marca.marca_nombre }}</td>
+            <td>
+              <a
+                name=""
+                id=""
+                class="btn btn-info"
+                style="font-size: medium; font-weight: bold"
+                href="{% url 'editar_marca' marca.id %}"
+                role="button"
+              >
+                Editar
+              </a>
+
+              <a
+                name=""
+                id=""
+                class="btn btn-danger"
+                style="font-size: medium; font-weight: bold"
+                href="{% url 'eliminar_marca' marca.id %}"
+                role="button"
+              >
+                Borrar
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer text-muted"></div>
+  </div>
+</div>
+{% endblock %}

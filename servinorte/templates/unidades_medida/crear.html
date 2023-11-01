@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block titulo%} Agregar nueva medida {% endblock %} {% block content %}
+<hr />
+<div class="contenedor">
+  <div class="card">
+    <div class="card-header">Crear una medida</div>
+    <div class="card-body">
+      <h4 class="card-title">Datos de la medida</h4>
+      {% include 'unidades_medida/form.html' %}
+    </div>
+    <div class="card-footer text-muted"></div>
+  </div>
+</div>
+{% endblock %}

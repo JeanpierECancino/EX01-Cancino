@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block titulo%} Agregar nueva sublinea {% endblock %} {% block content%}
+<hr />
+<div class="contenedor">
+  <div class="card">
+    <div class="card-header">Crear una sublinea</div>
+    <div class="card-body">
+      <h4 class="card-title">Datos de la sublinea</h4>
+      {% include 'sublinea_articulo/form.html' %}
+    </div>
+    <div class="card-footer text-muted"></div>
+  </div>
+</div>
+{% endblock %}

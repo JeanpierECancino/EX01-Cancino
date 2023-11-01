@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block titulo%} Editar inventario {% endblock %} {% block content %}
+<hr />
+<div class="contenedor">
+  <div class="card">
+    <div class="card-header">Editar un inventario</div>
+    <div class="card-body">
+      <h4 class="card-title">Datos del inventario</h4>
+      {% include 'inventario/form.html' %}
+    </div>
+    <div class="card-footer text-muted"></div>
+  </div>
+</div>
+{% endblock %}
